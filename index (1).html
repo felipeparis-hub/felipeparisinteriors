@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Felipe Paris · Interior Designer in Marbella · Roche Bobois Interiors</title>
-<meta name="description" content="Complete interior design for villas in Marbella and the Costa del Sol with Roche Bobois furniture and decor. See your home in 3D before you decide. English, Spanish, French and Italian spoken.">
+<meta name="description" content="Interior designer in Marbella, design project and 3D renders included. Complete interior design for villas on the Costa del Sol with Roche Bobois furniture and decor. See your home in 3D before you decide. English, Spanish, French and Italian spoken.">
 <link rel="canonical" href="https://felipeparisinteriors.com/en/">
 <link rel="alternate" hreflang="es" href="https://felipeparisinteriors.com/">
 <link rel="alternate" hreflang="en" href="https://felipeparisinteriors.com/en/">
@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="x-default" href="https://felipeparisinteriors.com/">
 <meta property="og:url" content="https://felipeparisinteriors.com/en/">
 <meta property="og:title" content="Felipe Paris · Interior Designer in Marbella · Roche Bobois Interiors">
-<meta property="og:description" content="Complete interior design for villas in Marbella and the Costa del Sol with Roche Bobois furniture and decor. See your home in 3D before you decide. English, Spanish, French and Italian spoken.">
+<meta property="og:description" content="Interior designer in Marbella, design project and 3D renders included. Complete interior design for villas on the Costa del Sol with Roche Bobois furniture and decor. See your home in 3D before you decide. English, Spanish, French and Italian spoken.">
 <meta property="og:locale" content="en_GB">
 <meta name="keywords" content="interiorismo Marbella, Roche Bobois Marbella, decoración villa Marbella, interior designer Marbella, amueblar villa Costa del Sol, diseño de interiores Benahavís, Sotogrande interior design, Felipe Paris">
 <meta name="theme-color" content="#0E1A2E">
@@ -97,7 +97,7 @@ em.s,.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spac
 .top.on{background:rgba(242,239,232,.9);color:var(--ink);border-color:var(--line);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
 .menu{display:flex;gap:30px;font-size:.92rem}
-.menu a{text-decoration:none;opacity:.78;transition:opacity .2s ease}
+.menu a{white-space:nowrap;text-decoration:none;opacity:.78;transition:opacity .2s ease}
 .menu a:hover{opacity:1}
 .tools{display:flex;align-items:center;gap:10px}
 .lang{display:flex}
@@ -106,7 +106,9 @@ em.s,.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spac
 .lang button[aria-pressed="true"] span{color:var(--ink)}
 .top.on .lang button[aria-pressed="true"] span{color:var(--paper)}
 .top .btn{min-height:44px}
-@media (max-width:1000px){.menu{display:none}.tools .btn{display:none}}
+@media (max-width:1320px){.menu{display:none}}
+@media (max-width:1000px){.tools .btn{display:none}}
+.tools .btn{white-space:nowrap}
 
 /* ---------- intro curtain ---------- */
 .intro{position:fixed;inset:0;z-index:95;background:var(--ink);color:var(--paper);display:grid;place-items:center;pointer-events:none;clip-path:inset(0 0 0 0);animation:lift 1s var(--ease-io) 1.35s forwards}
@@ -121,7 +123,8 @@ em.s,.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spac
 .hero{position:relative;height:100svh;min-height:600px;background:var(--ink);color:var(--paper);overflow:hidden;isolation:isolate}
 .hero .poster{position:absolute;inset:0;z-index:-2;background:url(/assets/despues.jpg) center/cover}
 #gl{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:-1;touch-action:pan-y}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(14,26,46,.55) 0%,rgba(14,26,46,0) 26%),linear-gradient(0deg,rgba(14,26,46,.85) 0%,rgba(14,26,46,.25) 38%,rgba(14,26,46,0) 60%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(14,26,46,.55) 0%,rgba(14,26,46,0) 26%),linear-gradient(90deg,rgba(14,26,46,.62) 0%,rgba(14,26,46,.3) 38%,rgba(14,26,46,0) 64%),linear-gradient(0deg,rgba(14,26,46,.9) 0%,rgba(14,26,46,.35) 40%,rgba(14,26,46,0) 66%)}
+.hero h1,.hero .sub{text-shadow:0 2px 30px rgba(14,26,46,.35)}
 .hero .wrap{position:absolute;left:0;right:0;bottom:0;padding-bottom:clamp(28px,6vh,64px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end;margin:0 auto}
 .hero h1{font-size:clamp(3.2rem,9vw,8.6rem);max-width:11ch}
 .hero h1 .s{font-size:1.04em}
@@ -233,6 +236,27 @@ section.band{padding-block:clamp(88px,12vw,168px)}
 @keyframes mq{to{transform:translateX(-50%)}}
 .zones:hover .zt{animation-play-state:paused}
 
+/* ---------- prices ---------- */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.pc{position:relative;display:flex;flex-direction:column;padding:36px 32px 34px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.35)}
+.pc.feat{background:var(--ink);color:var(--paper);border-color:var(--ink);box-shadow:0 24px 60px -28px rgba(14,26,46,.55)}
+.pc .tag{position:absolute;top:-13px;right:26px;padding:6px 12px;border-radius:999px;background:var(--sun);color:var(--ink);font:600 .68rem/1 var(--f-sans);letter-spacing:.1em;text-transform:uppercase}
+.pc h3{font-size:1.05rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px}
+.pc .amt{font-family:var(--f-serif);font-style:italic;font-size:clamp(2.6rem,4.4vw,3.8rem);line-height:1;letter-spacing:-.03em;margin:0}
+.pc .per{margin:10px 0 26px;color:var(--ink-2);font-size:.95rem}
+.pc.feat .per{color:rgba(242,239,232,.72)}
+.pc ul{list-style:none;margin:0;padding:22px 0 0;border-top:1px solid var(--line);display:grid;gap:12px}
+.pc.feat ul{border-color:rgba(242,239,232,.18)}
+.pc li{position:relative;padding-left:26px;font-size:.98rem;line-height:1.45}
+.pc li::before{content:"";position:absolute;left:2px;top:.42em;width:12px;height:7px;border-left:1.6px solid var(--cobalt);border-bottom:1.6px solid var(--cobalt);transform:rotate(-45deg)}
+.pc.feat li::before{border-color:var(--sun)}
+.pcta{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding:30px 32px;border-radius:22px;background:var(--sun)}
+.pcta>p{margin:0;font-size:clamp(1.4rem,2.4vw,2rem);letter-spacing:-.025em;font-weight:500;line-height:1.1;color:var(--ink)}
+.pcta .row{display:flex;flex-wrap:wrap;gap:12px}
+.pcta .btn{color:var(--ink)}
+.pcta .btn.solid{color:var(--paper)}
+.pcta .tel{flex-basis:100%;color:var(--ink);font-variant-numeric:tabular-nums;text-underline-offset:4px;font-size:.95rem}
+@media (max-width:900px){.pgrid{grid-template-columns:1fr}.pcta{padding:26px 22px}.pcta .row,.pcta .btn{width:100%}.pcta .btn{justify-content:center}}
 /* ---------- faq ---------- */
 .faq{border-top:1px solid var(--line)}
 .faq details{border-bottom:1px solid var(--line)}
@@ -337,6 +361,7 @@ footer{background:var(--ink);color:var(--paper);padding-block:40px calc(32px + e
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"¿Cuánto cuesta amueblar una villa con Roche Bobois?","acceptedAnswer":{"@type":"Answer","text":"Depende de los metros, las estancias y los tejidos elegidos. Tras la primera visita preparo una versión esencial y otra completa, pieza a pieza, ajustadas a tu presupuesto."}},
+{"@type":"Question","name":"¿El proyecto de diseño tiene coste aparte?","acceptedAnswer":{"@type":"Answer","text":"No. Cuando amueblas tu casa con Roche Bobois, el proyecto, los renders 3D y el seguimiento van incluidos. Pagas las piezas que elijas, a precio oficial de la marca."}},
 {"@type":"Question","name":"¿Hay que cambiar suelos o paredes?","acceptedAnswer":{"@type":"Answer","text":"No. Trabajo sobre tu casa tal como es: suelos, paredes, ventanas y techos se conservan. Cualquier obra se propone aparte y solo si la pides."}},
 {"@type":"Question","name":"¿Puedo ver el resultado antes de comprar?","acceptedAnswer":{"@type":"Answer","text":"Sí. Recibes la planta amueblada y cada estancia en 3D y en imagen realista, con las piezas exactas elegidas."}},
 {"@type":"Question","name":"¿Trabajas con propietarios extranjeros?","acceptedAnswer":{"@type":"Answer","text":"Sí. Trabajo en español, inglés, francés e italiano y coordino el proyecto a distancia si no estás en Marbella."}},
@@ -363,6 +388,7 @@ footer{background:var(--ink);color:var(--paper);padding-block:40px calc(32px + e
       <a href="#antes-despues" data-i="nBA">Antes y después</a>
       <a href="#sobre-mi" data-i="nAbout">Sobre mí</a>
       <a href="#metodo" data-i="nMethod">Método</a>
+      <a href="#precios" data-i="nPrice">Precios</a>
       <a href="#opiniones" data-i="nRv">Opiniones</a>
       <a href="#preguntas" data-i="nFaq">Preguntas</a>
       <a href="#contacto" data-i="nContact">Contacto</a>
@@ -386,16 +412,16 @@ footer{background:var(--ink);color:var(--paper);padding-block:40px calc(32px + e
     <div class="wrap">
       <div>
         <h1 id="h1"><span class="ln"><span data-i="h1a">L'art de vivre,</span></span><span class="ln"><span class="s" data-i="h1b" style="--d:.1s">frente al mar.</span></span></h1>
-        <p class="sub" data-i="heroSub">Interiores completos Roche Bobois en Marbella. Diseño cada estancia de tu villa y la ves en 3D antes de decidir.</p>
+        <p class="sub" data-i="heroSub">Interiorista especializado en Roche Bobois en Marbella. El proyecto y los renders 3D van incluidos: ves cada estancia de tu villa antes de decidir.</p>
         <div class="row">
           <a class="btn light" href="#contacto"><span data-i="cta">Solicitar propuesta</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="btn" href="#antes-despues" data-i="ctaBA">Ver antes y después</a>
         </div>
       </div>
       <div class="hud" aria-live="off">
-        <span class="state"><span data-i="hudScan">Escaneando salón</span> · <b id="hudPct">0%</b></span>
+        <span class="state"><span data-i="hudScan">Amueblando salón</span> · <b id="hudPct">0%</b></span>
         <span class="meter"><b id="hudBar"></b></span>
-        <span data-i="hudLoc">Villa · Marbella · 62 m²</span>
+        <span data-i="hudLoc">Villa · Marbella · 600 m²</span>
         <button type="button" id="replay" data-i="replay">Repetir escaneo</button>
       </div>
     </div>
@@ -415,11 +441,11 @@ footer{background:var(--ink);color:var(--paper);padding-block:40px calc(32px + e
     <div class="wrap">
       <div class="head rise">
         <h2 id="ba-h" data-i-html="baT">El mismo salón. <span class="s">Otra vida.</span></h2>
-        <p data-i="baP">Una villa en Marbella con vistas al mar. Se conservan el suelo, las paredes y las ventanas; cambian el mobiliario y la decoración, todo Roche Bobois. Arrastra para comparar.</p>
+        <p data-i="baP">Propuesta en render para el salón de una villa de 600 m² en Marbella con vistas al mar. Se conservan el suelo, las paredes y las ventanas; cambian el mobiliario y la decoración. Arrastra para comparar.</p>
       </div>
       <div class="cmp rise" id="cmp" style="--p:50%">
-        <img src="/assets/antes.jpg" width="1600" height="899" loading="lazy" alt="Salón de una villa en Marbella antes de decorar, con muebles viejos y cajas" data-i-alt="altB">
-        <img class="a2" src="/assets/despues.jpg" width="1600" height="899" loading="lazy" alt="El mismo salón con sofá Bubble, composición Mah Jong y sillones Bubble de Roche Bobois" data-i-alt="altA">
+        <img src="/assets/antes.jpg" width="1920" height="1072" loading="lazy" alt="Salón vacío de doble altura en una villa de Marbella con vistas al mar, antes de amueblar" data-i-alt="altB">
+        <img class="a2" src="/assets/despues.jpg" width="1920" height="1072" loading="lazy" alt="El mismo salón amueblado: gran sofá modular en bouclé, mesas de travertino, butacas de cuero y comedor para diez" data-i-alt="altA">
         <div class="beam"></div>
         <div class="knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></div>
         <span class="tag t1" data-i="before">Antes</span><span class="tag t2" data-i="after">Después</span>
@@ -481,6 +507,24 @@ footer{background:var(--ink);color:var(--paper);padding-block:40px calc(32px + e
         <li><span class="n">4</span><h3 data-i="s4t">Presupuesto claro</h3><p data-i="s4p">Versión esencial y versión completa, pieza a pieza, con medidas, tejidos y acabados.</p></li>
         <li><span class="n">5</span><h3 data-i="s5t">Llave en mano</h3><p data-i="s5p">Coordino pedido, entrega y montaje. Llegas a una casa terminada.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="band prices" id="precios" aria-labelledby="pr-h">
+    <div class="wrap">
+      <div class="head rise">
+        <h2 id="pr-h" data-i-html="prT">Precios <span class="s">claros.</span></h2>
+        <p data-i="prP">Sin sorpresas: sabes desde el principio qué pagas y qué va incluido.</p>
+      </div>
+      <div class="pgrid"><article class="pc rise"><h3 data-i="pr1n">Asesoría</h3><p class="amt" data-i="pr1p">Gratis</p><p class="per" data-i="pr1s">Sin compromiso</p><ul data-i-html="pr1l"><li>Primera visita o videollamada</li><li>Ideas y estilo para tu casa</li><li>Primera selección de piezas</li><li>En español, inglés, francés o italiano</li></ul></article><article class="pc rise feat"><span class="tag" data-i="prTag">Recomendado</span><h3 data-i="pr2n">Proyecto completo</h3><p class="amt" data-i="pr2p">Incluido</p><p class="per" data-i="pr2s">al amueblar con Roche Bobois</p><ul data-i-html="pr2l"><li>Planta amueblada</li><li>Renders 3D de cada estancia</li><li>Presupuesto pieza a pieza</li><li>Seguimiento hasta la entrega</li></ul></article><article class="pc rise"><h3 data-i="pr3n">Mobiliario</h3><p class="amt" data-i="pr3p">Precio oficial</p><p class="per" data-i="pr3s">Tarifa Roche Bobois</p><ul data-i-html="pr3l"><li>Mismo precio que en tienda</li><li>Tejidos y acabados a medida</li><li>Entrega y montaje según condiciones de la tienda</li></ul></article></div>
+      <div class="pcta rise">
+        <p data-i="prCta">Reserva tu asesoría gratuita</p>
+        <div class="row">
+          <a class="btn solid" id="prWa" href="https://wa.me/34651059366" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9.5 9.5c.3 1.8 1.7 3.6 3.7 4.6"/></svg><span data-i="prWa">WhatsApp</span></a>
+          <a class="btn" href="tel:+34651059366"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-i="prCall">Llámame</span></a>
+        </div>
+        <a class="tel" href="tel:+34651059366" translate="no">+34 651 05 93 66</a>
+      </div>
     </div>
   </section>
 
@@ -609,7 +653,7 @@ footer{background:var(--ink);color:var(--paper);padding-block:40px calc(32px + e
 
 <script>
 /* ---------- contact config ---------- */
-const WHATSAPP=""; // e.g. "346XXXXXXXX" (no +, no spaces)
+const WHATSAPP="34651059366"; // no +, no spaces
 const EMAIL="flpparisvazquez@gmail.com";
 const GOOGLE_REVIEW_URL=""; // link to your Google Business review form
 /* Real client reviews only. Add one object per review, exactly as the client wrote it (with their permission):
@@ -623,11 +667,11 @@ const STORE_REVIEWS=[
  {name:"Robin L.",date:"2025-02-10",stars:5,text:"Everything was great in cooperation with ROCHE BOBOIS, thank you for the professional and efficient work 👍",url:"https://www.trustpilot.com/users/67a9f110bbb6ea1f013475d6"}];
 
 const T={
-es:{nAbout:"Sobre mí",abT:"Hola, soy <span class=\"s\">Felipe</span>, interiorista en Marbella.",abP1:"Con 16 años me fui a Burdeos y allí aprendí el oficio: cinco años con Roche Bobois en Francia, entre showroom y ferias de mueble, conociendo cada colección por dentro.",abP2:"Después pasé más de tres años en el sector inmobiliario de la Costa del Sol. Allí descubrí lo que más me gusta: acompañar a los propietarios que compraban en Marbella también después de la venta, ayudándoles a decorar y amueblar su nueva casa para que se sintiera suya desde el primer día.",abP3:"Hoy me dedico a eso por completo: diseño interiores completos con la casa francesa que mejor conozco, Roche Bobois, en tu idioma: español, francés, inglés o italiano.",tl1:"Roche Bobois, Groupe Bayle (Burdeos)",tl2:"Keller Williams, Costa del Sol · ventas y decoración posventa",tl3:"Certificado LVMH",tl4y:"Desde octubre de 2026",tl4:"Interiorista · Roche Bobois Marbella",abCta:"Hablemos de tu casa",abAlt:"Felipe Paris en el salón de una vivienda decorada en Marbella",rvScore:"4,7",rvVia:"Trustpilot · verificada",nRv:"Opiniones",rvT:"Opiniones <span class=\"s\">reales</span>",rvP:"La valoración de la tienda Roche Bobois Marbella y, a continuación, las opiniones de los propietarios con los que trabajo.",rvStore:"<b>Roche Bobois Marbella</b>, la tienda donde trabajo y desde la que llegan todas las piezas de tus proyectos: 4,7 sobre 5 en 29 opiniones de clientes en Trustpilot.",rvSrc:"Fuente: Trustpilot, consultado en octubre de 2026. Opiniones sobre la tienda, citadas tal cual, en su idioma original.",rvRead:"Leer las opiniones",rvEmpty:"Las primeras opiniones de mis clientes aparecerán aquí, con su nombre y su casa.",rvLeave:"Dejar mi opinión",rvGoogle:"Opinar en Google",rvHow:"¿Ya hemos trabajado juntos? Copia este mensaje, complétalo y envíamelo:",rvTplTxt:"Hola Felipe, esta es mi opinión para tu web:\n\nNombre (o iniciales):\nZona y tipo de vivienda:\nNota (1 a 5):\nMi experiencia:\n\nAutorizo a publicarla.",skip:"Saltar al contenido",nBA:"Antes y después",nMethod:"Método",nFaq:"Preguntas",nContact:"Contacto",cta:"Solicitar propuesta",
-h1a:"L'art de vivre,",h1b:"frente al mar.",heroSub:"Interiores completos Roche Bobois en Marbella. Diseño cada estancia de tu villa y la ves en 3D antes de decidir.",ctaBA:"Ver antes y después",
-hudScan:"Escaneando salón",hudDone:"Salón redecorado",hudLoc:"Villa · Marbella · 62 m²",replay:"Repetir escaneo",
+es:{nPrice:"Precios",prT:"Precios <span class=\"s\">claros.</span>",prP:"Sin sorpresas: sabes desde el principio qué pagas y qué va incluido.",prTag:"Recomendado",prCta:"Reserva tu asesoría gratuita",prWa:"WhatsApp",prCall:"Llámame",prWaTxt:"Hola Felipe, me gustaría una asesoría gratuita para mi casa.",pr1n:"Asesoría",pr1p:"Gratis",pr1s:"Sin compromiso",pr1l:"<li>Primera visita o videollamada</li><li>Ideas y estilo para tu casa</li><li>Primera selección de piezas</li><li>En español, inglés, francés o italiano</li>",pr2n:"Proyecto completo",pr2p:"Incluido",pr2s:"al amueblar con Roche Bobois",pr2l:"<li>Planta amueblada</li><li>Renders 3D de cada estancia</li><li>Presupuesto pieza a pieza</li><li>Seguimiento hasta la entrega</li>",pr3n:"Mobiliario",pr3p:"Precio oficial",pr3s:"Tarifa Roche Bobois",pr3l:"<li>Mismo precio que en tienda</li><li>Tejidos y acabados a medida</li><li>Entrega y montaje según condiciones de la tienda</li>",nAbout:"Sobre mí",abT:"Hola, soy <span class=\"s\">Felipe</span>, interiorista en Marbella.",abP1:"Con 16 años me fui a Burdeos y allí aprendí el oficio: cinco años con Roche Bobois en Francia, entre showroom y ferias de mueble, conociendo cada colección por dentro.",abP2:"Después pasé más de tres años en el sector inmobiliario de la Costa del Sol. Allí descubrí lo que más me gusta: acompañar a los propietarios que compraban en Marbella también después de la venta, ayudándoles a decorar y amueblar su nueva casa para que se sintiera suya desde el primer día.",abP3:"Hoy me dedico a eso por completo: diseño interiores completos con la casa francesa que mejor conozco, Roche Bobois, en tu idioma: español, francés, inglés o italiano.",tl1:"Roche Bobois, Groupe Bayle (Burdeos)",tl2:"Keller Williams, Costa del Sol · ventas y decoración posventa",tl3:"Certificado LVMH",tl4y:"Desde octubre de 2026",tl4:"Interiorista · Roche Bobois Marbella",abCta:"Hablemos de tu casa",abAlt:"Felipe Paris en el salón de una vivienda decorada en Marbella",rvScore:"4,7",rvVia:"Trustpilot · verificada",nRv:"Opiniones",rvT:"Opiniones <span class=\"s\">reales</span>",rvP:"La valoración de la tienda Roche Bobois Marbella y, a continuación, las opiniones de los propietarios con los que trabajo.",rvStore:"<b>Roche Bobois Marbella</b>, la tienda donde trabajo y desde la que llegan todas las piezas de tus proyectos: 4,7 sobre 5 en 29 opiniones de clientes en Trustpilot.",rvSrc:"Fuente: Trustpilot, consultado en octubre de 2026. Opiniones sobre la tienda, citadas tal cual, en su idioma original.",rvRead:"Leer las opiniones",rvEmpty:"Las primeras opiniones de mis clientes aparecerán aquí, con su nombre y su casa.",rvLeave:"Dejar mi opinión",rvGoogle:"Opinar en Google",rvHow:"¿Ya hemos trabajado juntos? Copia este mensaje, complétalo y envíamelo:",rvTplTxt:"Hola Felipe, esta es mi opinión para tu web:\n\nNombre (o iniciales):\nZona y tipo de vivienda:\nNota (1 a 5):\nMi experiencia:\n\nAutorizo a publicarla.",skip:"Saltar al contenido",nBA:"Antes y después",nMethod:"Método",nFaq:"Preguntas",nContact:"Contacto",cta:"Solicitar propuesta",
+h1a:"L'art de vivre,",h1b:"frente al mar.",heroSub:"Interiorista especializado en Roche Bobois en Marbella. El proyecto y los renders 3D van incluidos: ves cada estancia de tu villa antes de decidir.",ctaBA:"Ver antes y después",
+hudScan:"Amueblando salón",hudDone:"Salón redecorado",hudLoc:"Villa · Marbella · 600 m²",replay:"Repetir escaneo",
 mani:"Diseño interiores completos con un solo catálogo, <span class=\"s\">Roche Bobois</span>, y una sola persona a tu lado. Del primer plano a la última lámpara, ves tu casa en 3D antes de decidir.",
-baT:"El mismo salón. <span class=\"s\">Otra vida.</span>",baP:"Una villa en Marbella con vistas al mar. Se conservan el suelo, las paredes y las ventanas; cambian el mobiliario y la decoración, todo Roche Bobois. Arrastra para comparar.",before:"Antes",after:"Después",baAria:"Comparar antes y después",altB:"Salón de una villa en Marbella antes de decorar, con muebles viejos y cajas",altA:"El mismo salón con sofá Bubble, composición Mah Jong y sillones Bubble de Roche Bobois",
+baT:"El mismo salón. <span class=\"s\">Otra vida.</span>",baP:"Propuesta en render para el salón de una villa de 600 m² en Marbella con vistas al mar. Se conservan el suelo, las paredes y las ventanas; cambian el mobiliario y la decoración. Arrastra para comparar.",before:"Antes",after:"Después",baAria:"Comparar antes y después",altB:"Salón vacío de doble altura en una villa de Marbella con vistas al mar, antes de amueblar",altA:"El mismo salón amueblado: gran sofá modular en bouclé, mesas de travertino, butacas de cuero y comedor para diez",
 cr1:"Sofá · Sacha Lakic · bouclé crema",cr2:"Composición · Hans Hopfer",cr3:"Sillones · terciopelo coñac",cr4:"Mesa de mármol, alfombra y lámpara de arco",ai:"Imagen orientativa generada con IA; formas y acabados finales según la ficha oficial de cada pieza.",
 detT:"Los detalles <span class=\"s\">hacen la casa.</span>",detP:"Texturas que se tocan, volúmenes que invitan a sentarse y una luz pensada para cada hora del día en la Costa del Sol.",d1:"bouclé crema",d2:"módulos apilables",d3t:"Luz y mármol",d3:"lámpara de arco",altD1:"Detalle del sofá Bubble en bouclé crema junto a la piscina",altD2:"Detalle de la composición Mah Jong con cojines estampados",altD3:"Lámpara de arco, mesa de mármol y sillones en terciopelo coñac",
 mT:"Cinco pasos. <span class=\"s\">Un solo interlocutor.</span>",mP:"Tu casa se respeta tal como es. Del primer plano a la última lámpara, hablas siempre conmigo.",
@@ -636,7 +680,7 @@ pT:"Un catálogo. <span class=\"s\">Una firma.</span>",pP:"Una casa de diseño f
 r1t:"Diseño francés desde 1960",r1d:"Sofás, mesas, camas, luz, alfombras y objetos de una misma casa: un interior coherente de la entrada a la terraza.",r2t:"A medida",r2d:"Cientos de tejidos, pieles y acabados para que cada pieza se haga para tu casa.",r3t:"Piezas de autor",r3d:"Mah Jong, Bubble y colecciones firmadas por diseñadores y casas de moda.",
 f1t:"Mirada inmobiliaria",f1d:"Vengo del sector inmobiliario de la Costa del Sol: sé qué hace que una villa se viva mejor y valga más.",f2t:"Cuatro idiomas",f2d:"Español, inglés, francés e italiano, sin intermediarios.",f3t:"Todo en 3D",f3d:"Salón, dormitorios, comedor, pasillos y porche: ninguna estancia sin su imagen.",
 qT:"Preguntas <span class=\"s\">frecuentes</span>",qP:"Lo que suelen preguntarme los propietarios antes de empezar.",
-faq:[["¿Cuánto cuesta amueblar una villa con Roche Bobois?","Depende de los metros, las estancias y los tejidos elegidos. Tras la primera visita preparo una versión esencial y otra completa, pieza a pieza, ajustadas a tu presupuesto."],["¿Hay que cambiar suelos o paredes?","No. Trabajo sobre tu casa tal como es: suelos, paredes, ventanas y techos se conservan. Cualquier obra se propone aparte y solo si la pides."],["¿Puedo ver el resultado antes de comprar?","Sí. Recibes la planta amueblada y cada estancia en 3D y en imagen realista, con las piezas exactas elegidas."],["¿Trabajas con propietarios extranjeros?","Sí. Trabajo en español, inglés, francés e italiano y coordino el proyecto a distancia si no estás en Marbella."],["¿En qué zonas trabajas?","En toda la Costa del Sol: Marbella, Puerto Banús, Nueva Andalucía, Benahavís, La Zagaleta, Estepona, Sotogrande, Mijas y Málaga."]],
+faq:[["¿Cuánto cuesta amueblar una villa con Roche Bobois?","Depende de los metros, las estancias y los tejidos elegidos. Tras la primera visita preparo una versión esencial y otra completa, pieza a pieza, ajustadas a tu presupuesto."],["¿El proyecto de diseño tiene coste aparte?", "No. Cuando amueblas tu casa con Roche Bobois, el proyecto, los renders 3D y el seguimiento van incluidos. Pagas las piezas que elijas, a precio oficial de la marca."],["¿Hay que cambiar suelos o paredes?","No. Trabajo sobre tu casa tal como es: suelos, paredes, ventanas y techos se conservan. Cualquier obra se propone aparte y solo si la pides."],["¿Puedo ver el resultado antes de comprar?","Sí. Recibes la planta amueblada y cada estancia en 3D y en imagen realista, con las piezas exactas elegidas."],["¿Trabajas con propietarios extranjeros?","Sí. Trabajo en español, inglés, francés e italiano y coordino el proyecto a distancia si no estás en Marbella."],["¿En qué zonas trabajas?","En toda la Costa del Sol: Marbella, Puerto Banús, Nueva Andalucía, Benahavís, La Zagaleta, Estepona, Sotogrande, Mijas y Málaga."]],
 cT:"Cuéntame <span class=\"s\">tu casa.</span>",cP:"Rellena lo que sepas. Preparo un mensaje con tus datos para que me lo envíes por WhatsApp o email, y te respondo personalmente.",copy:"Copiar",copied:"Copiado",
 fName:"Nombre",fPhone:"Teléfono o WhatsApp",fEmail:"Email (opcional)",fType:"Tipo de vivienda",t0:"Villa",t1:"Ático",t2:"Apartamento",t3:"Adosado",fZone:"Zona",zOther:"Otra",fSize:"Superficie (m²)",fWhen:"Plazo",w0:"Lo antes posible",w1:"En 3 meses",w2:"En 6 meses",w3:"Solo explorando",fRooms:"Estancias",fBudget:"Presupuesto en mobiliario y decoración",fMsg:"Cómo imaginas tu casa",fMsgPh:"Luminosa, mediterránea, con color en el salón…",fSend:"Preparar mi solicitud",
 rooms:["Casa completa","Salón","Comedor","Dormitorios","Terraza y porche","Despacho","Entrada y pasillos"],budget:["Hasta 50.000 €","50.000–100.000 €","100.000–250.000 €","250.000–500.000 €","Más de 500.000 €"],
@@ -645,11 +689,11 @@ dT:"Tu solicitud está lista",dWa:"Enviar por WhatsApp",dCopy:"Copiar para email
 msgHead:"Hola Felipe, quiero amueblar mi vivienda con Roche Bobois.",lab:{name:"Nombre",phone:"Teléfono",email:"Email",type:"Vivienda",zone:"Zona",size:"Superficie",when:"Plazo",rooms:"Estancias",budget:"Presupuesto",msg:"Idea"},
 foo1:"Maison d'intérieurs · Mobiliario y decoración Roche Bobois · Marbella, Costa del Sol",foo2:"Web personal de Felipe Paris. Roche Bobois, Bubble y Mah Jong son marcas de sus titulares."},
 
-en:{nAbout:"About",abT:"Hi, I'm <span class=\"s\">Felipe</span>, an interior designer in Marbella.",abP1:"At 16 I moved to Bordeaux, where I learned the trade: five years with Roche Bobois in France, between the showroom and furniture fairs, getting to know every collection from the inside.",abP2:"I then spent more than three years in Costa del Sol real estate. That is where I found what I love most: staying with owners who bought in Marbella after the sale, helping them decorate and furnish their new home so it felt like theirs from day one.",abP3:"Today I do this full time: I design complete interiors with the French house I know best, Roche Bobois, in your language: Spanish, French, English or Italian.",tl1:"Roche Bobois, Groupe Bayle (Bordeaux)",tl2:"Keller Williams, Costa del Sol · sales and post-sale decoration",tl3:"LVMH certificate",tl4y:"Since October 2026",tl4:"Interior designer · Roche Bobois Marbella",abCta:"Let's Talk About Your Home",abAlt:"Felipe Paris in the living room of a decorated home in Marbella",rvScore:"4.7",rvVia:"Trustpilot · verified",nRv:"Reviews",rvT:"Real <span class=\"s\">reviews</span>",rvP:"The rating of the Roche Bobois Marbella showroom, followed by reviews from the owners I work with.",rvStore:"<b>Roche Bobois Marbella</b>, the showroom where I work and where every piece in your project comes from: 4.7 out of 5 from 29 customer reviews on Trustpilot.",rvSrc:"Source: Trustpilot, checked in October 2026. Reviews of the showroom, quoted as written, in their original language.",rvRead:"Read the Reviews",rvEmpty:"My clients' first reviews will appear here, with their name and their home.",rvLeave:"Leave a Review",rvGoogle:"Review on Google",rvHow:"Have we worked together? Copy this message, fill it in and send it to me:",rvTplTxt:"Hi Felipe, here is my review for your website:\n\nName (or initials):\nArea and property type:\nRating (1 to 5):\nMy experience:\n\nI agree to it being published.",skip:"Skip to content",nBA:"Before & After",nMethod:"Method",nFaq:"FAQ",nContact:"Contact",cta:"Request a Proposal",
-h1a:"L'art de vivre,",h1b:"by the sea.",heroSub:"Complete Roche Bobois interiors in Marbella. I design every room of your villa and you see it in 3D before you decide.",ctaBA:"See Before & After",
-hudScan:"Scanning living room",hudDone:"Living room redesigned",hudLoc:"Villa · Marbella · 62 m²",replay:"Replay Scan",
+en:{nPrice:"Pricing",prT:"Clear <span class=\"s\">pricing.</span>",prP:"No surprises: you know from the start what you pay and what is included.",prTag:"Recommended",prCta:"Book Your Free Consultation",prWa:"WhatsApp",prCall:"Call Me",prWaTxt:"Hi Felipe, I'd like a free consultation for my home.",pr1n:"Consultation",pr1p:"Free",pr1s:"No obligation",pr1l:"<li>First visit or video call</li><li>Ideas and style for your home</li><li>First selection of pieces</li><li>In English, Spanish, French or Italian</li>",pr2n:"Full Project",pr2p:"Included",pr2s:"when you furnish with Roche Bobois",pr2l:"<li>Furnished floor plan</li><li>3D renders of every room</li><li>Piece-by-piece quote</li><li>Follow-up until delivery</li>",pr3n:"Furniture",pr3p:"Official price",pr3s:"Roche Bobois rates",pr3l:"<li>Same price as in store</li><li>Made-to-measure fabrics and finishes</li><li>Delivery and assembly per store terms</li>",nAbout:"About",abT:"Hi, I'm <span class=\"s\">Felipe</span>, an interior designer in Marbella.",abP1:"At 16 I moved to Bordeaux, where I learned the trade: five years with Roche Bobois in France, between the showroom and furniture fairs, getting to know every collection from the inside.",abP2:"I then spent more than three years in Costa del Sol real estate. That is where I found what I love most: staying with owners who bought in Marbella after the sale, helping them decorate and furnish their new home so it felt like theirs from day one.",abP3:"Today I do this full time: I design complete interiors with the French house I know best, Roche Bobois, in your language: Spanish, French, English or Italian.",tl1:"Roche Bobois, Groupe Bayle (Bordeaux)",tl2:"Keller Williams, Costa del Sol · sales and post-sale decoration",tl3:"LVMH certificate",tl4y:"Since October 2026",tl4:"Interior designer · Roche Bobois Marbella",abCta:"Let's Talk About Your Home",abAlt:"Felipe Paris in the living room of a decorated home in Marbella",rvScore:"4.7",rvVia:"Trustpilot · verified",nRv:"Reviews",rvT:"Real <span class=\"s\">reviews</span>",rvP:"The rating of the Roche Bobois Marbella showroom, followed by reviews from the owners I work with.",rvStore:"<b>Roche Bobois Marbella</b>, the showroom where I work and where every piece in your project comes from: 4.7 out of 5 from 29 customer reviews on Trustpilot.",rvSrc:"Source: Trustpilot, checked in October 2026. Reviews of the showroom, quoted as written, in their original language.",rvRead:"Read the Reviews",rvEmpty:"My clients' first reviews will appear here, with their name and their home.",rvLeave:"Leave a Review",rvGoogle:"Review on Google",rvHow:"Have we worked together? Copy this message, fill it in and send it to me:",rvTplTxt:"Hi Felipe, here is my review for your website:\n\nName (or initials):\nArea and property type:\nRating (1 to 5):\nMy experience:\n\nI agree to it being published.",skip:"Skip to content",nBA:"Before & After",nMethod:"Method",nFaq:"FAQ",nContact:"Contact",cta:"Request a Proposal",
+h1a:"L'art de vivre,",h1b:"by the sea.",heroSub:"Interior designer specialising in Roche Bobois in Marbella. The design project and 3D renders are included: see every room of your villa before you decide.",ctaBA:"See Before & After",
+hudScan:"Furnishing living room",hudDone:"Living room redesigned",hudLoc:"Villa · Marbella · 600 m²",replay:"Replay Scan",
 mani:"I design complete interiors from one catalogue, <span class=\"s\">Roche Bobois</span>, with one person by your side. From the first plan to the last lamp, you see your home in 3D before you decide.",
-baT:"Same room. <span class=\"s\">A new life.</span>",baP:"A sea-view villa in Marbella. The floor, walls and windows stay; the furniture and decor change, all Roche Bobois. Drag to compare.",before:"Before",after:"After",baAria:"Compare before and after",altB:"Living room of a Marbella villa before decoration, with old furniture and boxes",altA:"The same living room with a Bubble sofa, Mah Jong composition and Bubble armchairs by Roche Bobois",
+baT:"Same room. <span class=\"s\">A new life.</span>",baP:"A rendered proposal for the living room of a 600 m² sea-view villa in Marbella. The floor, walls and windows stay; the furniture and decor change. Drag to compare.",before:"Before",after:"After",baAria:"Compare before and after",altB:"Empty double-height living room in a Marbella sea-view villa, before furnishing",altA:"The same living room furnished: large bouclé modular sofa, travertine tables, leather armchairs and a dining table for ten",
 cr1:"Sofa · Sacha Lakic · cream bouclé",cr2:"Composition · Hans Hopfer",cr3:"Armchairs · cognac velvet",cr4:"Marble table, rug and arc lamp",ai:"AI-generated illustrative image; final shapes and finishes as per each piece's official spec sheet.",
 detT:"Details <span class=\"s\">make the home.</span>",detP:"Textures you want to touch, shapes that invite you to sit, and light designed for every hour of the Costa del Sol day.",d1:"cream bouclé",d2:"stackable modules",d3t:"Light & marble",d3:"arc lamp",altD1:"Detail of the Bubble sofa in cream bouclé by the pool",altD2:"Detail of the Mah Jong composition with patterned cushions",altD3:"Arc lamp, marble table and cognac velvet armchairs",
 mT:"Five steps. <span class=\"s\">One point of contact.</span>",mP:"Your home is respected as it is. From the first plan to the last lamp, you always deal with me.",
@@ -658,7 +702,7 @@ pT:"One catalogue. <span class=\"s\">One signature.</span>",pP:"A French design 
 r1t:"French design since 1960",r1d:"Sofas, tables, beds, lighting, rugs and objects from one house: a coherent interior from the entrance to the terrace.",r2t:"Made to measure",r2d:"Hundreds of fabrics, leathers and finishes, so every piece is made for your home.",r3t:"Designer pieces",r3d:"Mah Jong, Bubble and collections signed by designers and fashion houses.",
 f1t:"A real-estate eye",f1d:"I come from Costa del Sol real estate: I know what makes a villa better to live in and worth more.",f2t:"Four languages",f2d:"Spanish, English, French and Italian, no middlemen.",f3t:"Everything in 3D",f3d:"Living room, bedrooms, dining, hallways and porch: no room without its image.",
 qT:"Frequently Asked <span class=\"s\">Questions</span>",qP:"What owners usually ask me before we start.",
-faq:[["How much does it cost to furnish a villa with Roche Bobois?","It depends on the size, the rooms and the fabrics chosen. After the first visit I prepare an essential and a complete version, piece by piece, fitted to your budget."],["Do floors or walls need changing?","No. I work with your home as it is: floors, walls, windows and ceilings stay. Any building work is proposed separately and only if you ask."],["Can I see the result before buying?","Yes. You receive the furnished floor plan and every room in 3D and as a realistic image, with the exact pieces chosen."],["Do you work with overseas owners?","Yes. I work in Spanish, English, French and Italian and can run the project remotely if you are not in Marbella."],["Which areas do you cover?","The whole Costa del Sol: Marbella, Puerto Banús, Nueva Andalucía, Benahavís, La Zagaleta, Estepona, Sotogrande, Mijas and Málaga."]],
+faq:[["How much does it cost to furnish a villa with Roche Bobois?","It depends on the size, the rooms and the fabrics chosen. After the first visit I prepare an essential and a complete version, piece by piece, fitted to your budget."],["Is the design project charged separately?", "No. When you furnish your home with Roche Bobois, the design project, the 3D renders and the follow-up are included. You pay for the pieces you choose, at the brand's official price."],["Do floors or walls need changing?","No. I work with your home as it is: floors, walls, windows and ceilings stay. Any building work is proposed separately and only if you ask."],["Can I see the result before buying?","Yes. You receive the furnished floor plan and every room in 3D and as a realistic image, with the exact pieces chosen."],["Do you work with overseas owners?","Yes. I work in Spanish, English, French and Italian and can run the project remotely if you are not in Marbella."],["Which areas do you cover?","The whole Costa del Sol: Marbella, Puerto Banús, Nueva Andalucía, Benahavís, La Zagaleta, Estepona, Sotogrande, Mijas and Málaga."]],
 cT:"Tell me about <span class=\"s\">your home.</span>",cP:"Fill in what you know. I'll prepare a message with your details for you to send by WhatsApp or email, and I'll reply personally.",copy:"Copy",copied:"Copied",
 fName:"Name",fPhone:"Phone or WhatsApp",fEmail:"Email (optional)",fType:"Property type",t0:"Villa",t1:"Penthouse",t2:"Apartment",t3:"Townhouse",fZone:"Area",zOther:"Other",fSize:"Size (m²)",fWhen:"Timing",w0:"As soon as possible",w1:"In 3 months",w2:"In 6 months",w3:"Just exploring",fRooms:"Rooms",fBudget:"Budget for furniture and decor",fMsg:"How you picture your home",fMsgPh:"Bright, Mediterranean, colour in the living room…",fSend:"Prepare My Request",
 rooms:["Whole home","Living room","Dining room","Bedrooms","Terrace & porch","Study","Entrance & hallways"],budget:["Up to €50,000","€50,000–100,000","€100,000–250,000","€250,000–500,000","Over €500,000"],
@@ -667,11 +711,11 @@ dT:"Your request is ready",dWa:"Send via WhatsApp",dCopy:"Copy for Email",noWa:"
 msgHead:"Hi Felipe, I'd like to furnish my home with Roche Bobois.",lab:{name:"Name",phone:"Phone",email:"Email",type:"Property",zone:"Area",size:"Size",when:"Timing",rooms:"Rooms",budget:"Budget",msg:"Idea"},
 foo1:"Maison d'intérieurs · Roche Bobois furniture and decor · Marbella, Costa del Sol",foo2:"Felipe Paris's personal website. Roche Bobois, Bubble and Mah Jong are trademarks of their owners."},
 
-fr:{nAbout:"À propos",abT:"Bonjour, je suis <span class=\"s\">Felipe</span>, décorateur d'intérieur à Marbella.",abP1:"À 16 ans, je suis parti à Bordeaux et c'est là que j'ai appris le métier : cinq ans chez Roche Bobois en France, entre showroom et salons du meuble, à connaître chaque collection de l'intérieur.",abP2:"J'ai ensuite passé plus de trois ans dans l'immobilier sur la Costa del Sol. J'y ai découvert ce que je préfère : accompagner les propriétaires qui achetaient à Marbella, même après la vente, pour décorer et meubler leur nouvelle maison et qu'ils s'y sentent chez eux dès le premier jour.",abP3:"Aujourd'hui, je m'y consacre entièrement : je conçois des intérieurs complets avec la maison française que je connais le mieux, Roche Bobois, dans votre langue : espagnol, français, anglais ou italien.",tl1:"Roche Bobois, Groupe Bayle (Bordeaux)",tl2:"Keller Williams, Costa del Sol · ventes et décoration après-vente",tl3:"Certificat LVMH",tl4y:"Depuis octobre 2026",tl4:"Décorateur d'intérieur · Roche Bobois Marbella",abCta:"Parlons de votre maison",abAlt:"Felipe Paris dans le salon d'une maison décorée à Marbella",rvScore:"4,7",rvVia:"Trustpilot · vérifié",nRv:"Avis",rvT:"Des avis <span class=\"s\">réels</span>",rvP:"La note du showroom Roche Bobois Marbella, puis les avis des propriétaires avec qui je travaille.",rvStore:"<b>Roche Bobois Marbella</b>, le showroom où je travaille et d'où viennent toutes les pièces de vos projets : 4,7 sur 5 sur 29 avis clients sur Trustpilot.",rvSrc:"Source : Trustpilot, consulté en octobre 2026. Avis sur le showroom, cités tels quels, dans leur langue d\'origine.",rvRead:"Lire les avis",rvEmpty:"Les premiers avis de mes clients apparaîtront ici, avec leur nom et leur maison.",rvLeave:"Laisser mon avis",rvGoogle:"Donner un avis sur Google",rvHow:"Nous avons travaillé ensemble ? Copiez ce message, complétez-le et envoyez-le-moi :",rvTplTxt:"Bonjour Felipe, voici mon avis pour ton site :\n\nNom (ou initiales) :\nZone et type de bien :\nNote (1 à 5) :\nMon expérience :\n\nJ'autorise sa publication.",skip:"Aller au contenu",nBA:"Avant / Après",nMethod:"Méthode",nFaq:"Questions",nContact:"Contact",cta:"Demander une proposition",
-h1a:"L'art de vivre,",h1b:"face à la mer.",heroSub:"Intérieurs complets Roche Bobois à Marbella. Je conçois chaque pièce de votre villa et vous la voyez en 3D avant de décider.",ctaBA:"Voir l'avant / après",
-hudScan:"Scan du salon",hudDone:"Salon redécoré",hudLoc:"Villa · Marbella · 62 m²",replay:"Relancer le scan",
+fr:{nPrice:"Tarifs",prT:"Des tarifs <span class=\"s\">clairs.</span>",prP:"Aucune surprise : vous savez dès le départ ce que vous payez et ce qui est inclus.",prTag:"Recommandé",prCta:"Réservez votre conseil offert",prWa:"WhatsApp",prCall:"M'appeler",prWaTxt:"Bonjour Felipe, je souhaiterais un conseil offert pour ma maison.",pr1n:"Conseil",pr1p:"Offert",pr1s:"Sans engagement",pr1l:"<li>Première visite ou appel vidéo</li><li>Idées et style pour votre maison</li><li>Première sélection de pièces</li><li>En français, espagnol, anglais ou italien</li>",pr2n:"Projet complet",pr2p:"Inclus",pr2s:"en meublant avec Roche Bobois",pr2l:"<li>Plan meublé</li><li>Rendus 3D de chaque pièce</li><li>Devis pièce par pièce</li><li>Suivi jusqu'à la livraison</li>",pr3n:"Mobilier",pr3p:"Prix officiel",pr3s:"Tarif Roche Bobois",pr3l:"<li>Même prix qu'en magasin</li><li>Tissus et finitions sur mesure</li><li>Livraison et montage selon les conditions du magasin</li>",nAbout:"À propos",abT:"Bonjour, je suis <span class=\"s\">Felipe</span>, décorateur d'intérieur à Marbella.",abP1:"À 16 ans, je suis parti à Bordeaux et c'est là que j'ai appris le métier : cinq ans chez Roche Bobois en France, entre showroom et salons du meuble, à connaître chaque collection de l'intérieur.",abP2:"J'ai ensuite passé plus de trois ans dans l'immobilier sur la Costa del Sol. J'y ai découvert ce que je préfère : accompagner les propriétaires qui achetaient à Marbella, même après la vente, pour décorer et meubler leur nouvelle maison et qu'ils s'y sentent chez eux dès le premier jour.",abP3:"Aujourd'hui, je m'y consacre entièrement : je conçois des intérieurs complets avec la maison française que je connais le mieux, Roche Bobois, dans votre langue : espagnol, français, anglais ou italien.",tl1:"Roche Bobois, Groupe Bayle (Bordeaux)",tl2:"Keller Williams, Costa del Sol · ventes et décoration après-vente",tl3:"Certificat LVMH",tl4y:"Depuis octobre 2026",tl4:"Décorateur d'intérieur · Roche Bobois Marbella",abCta:"Parlons de votre maison",abAlt:"Felipe Paris dans le salon d'une maison décorée à Marbella",rvScore:"4,7",rvVia:"Trustpilot · vérifié",nRv:"Avis",rvT:"Des avis <span class=\"s\">réels</span>",rvP:"La note du showroom Roche Bobois Marbella, puis les avis des propriétaires avec qui je travaille.",rvStore:"<b>Roche Bobois Marbella</b>, le showroom où je travaille et d'où viennent toutes les pièces de vos projets : 4,7 sur 5 sur 29 avis clients sur Trustpilot.",rvSrc:"Source : Trustpilot, consulté en octobre 2026. Avis sur le showroom, cités tels quels, dans leur langue d\'origine.",rvRead:"Lire les avis",rvEmpty:"Les premiers avis de mes clients apparaîtront ici, avec leur nom et leur maison.",rvLeave:"Laisser mon avis",rvGoogle:"Donner un avis sur Google",rvHow:"Nous avons travaillé ensemble ? Copiez ce message, complétez-le et envoyez-le-moi :",rvTplTxt:"Bonjour Felipe, voici mon avis pour ton site :\n\nNom (ou initiales) :\nZone et type de bien :\nNote (1 à 5) :\nMon expérience :\n\nJ'autorise sa publication.",skip:"Aller au contenu",nBA:"Avant / Après",nMethod:"Méthode",nFaq:"Questions",nContact:"Contact",cta:"Demander une proposition",
+h1a:"L'art de vivre,",h1b:"face à la mer.",heroSub:"Décorateur d'intérieur spécialisé Roche Bobois à Marbella. Le projet et les rendus 3D sont inclus : vous voyez chaque pièce de votre villa avant de décider.",ctaBA:"Voir l'avant / après",
+hudScan:"Aménagement du salon",hudDone:"Salon redécoré",hudLoc:"Villa · Marbella · 600 m²",replay:"Relancer le scan",
 mani:"Je conçois des intérieurs complets avec un seul catalogue, <span class=\"s\">Roche Bobois</span>, et une seule personne à vos côtés. Du premier plan à la dernière lampe, vous voyez votre maison en 3D avant de décider.",
-baT:"Le même salon. <span class=\"s\">Une autre vie.</span>",baP:"Une villa vue mer à Marbella. Le sol, les murs et les fenêtres restent ; le mobilier et la décoration changent, tout en Roche Bobois. Faites glisser pour comparer.",before:"Avant",after:"Après",baAria:"Comparer avant et après",altB:"Salon d'une villa à Marbella avant la décoration, avec de vieux meubles et des cartons",altA:"Le même salon avec canapé Bubble, composition Mah Jong et fauteuils Bubble de Roche Bobois",
+baT:"Le même salon. <span class=\"s\">Une autre vie.</span>",baP:"Proposition en rendu pour le salon d'une villa de 600 m² vue mer à Marbella. Le sol, les murs et les fenêtres restent ; le mobilier et la décoration changent. Faites glisser pour comparer.",before:"Avant",after:"Après",baAria:"Comparer avant et après",altB:"Salon vide en double hauteur d'une villa vue mer à Marbella, avant aménagement",altA:"Le même salon meublé : grand canapé modulable en bouclette, tables en travertin, fauteuils en cuir et table pour dix",
 cr1:"Canapé · Sacha Lakic · bouclette crème",cr2:"Composition · Hans Hopfer",cr3:"Fauteuils · velours cognac",cr4:"Table en marbre, tapis et lampadaire arc",ai:"Image indicative générée par IA ; formes et finitions définitives selon la fiche officielle de chaque pièce.",
 detT:"Les détails <span class=\"s\">font la maison.</span>",detP:"Des textures qu'on a envie de toucher, des volumes qui invitent à s'asseoir et une lumière pensée pour chaque heure de la Costa del Sol.",d1:"bouclette crème",d2:"modules empilables",d3t:"Lumière et marbre",d3:"lampadaire arc",altD1:"Détail du canapé Bubble en bouclette crème près de la piscine",altD2:"Détail de la composition Mah Jong aux coussins imprimés",altD3:"Lampadaire arc, table en marbre et fauteuils en velours cognac",
 mT:"Cinq étapes. <span class=\"s\">Un seul interlocuteur.</span>",mP:"Votre maison est respectée telle qu'elle est. Du premier plan à la dernière lampe, vous parlez toujours avec moi.",
@@ -680,7 +724,7 @@ pT:"Un catalogue. <span class=\"s\">Une signature.</span>",pP:"Une maison de des
 r1t:"Design français depuis 1960",r1d:"Canapés, tables, lits, luminaires, tapis et objets d'une même maison : un intérieur cohérent de l'entrée à la terrasse.",r2t:"Sur mesure",r2d:"Des centaines de tissus, cuirs et finitions pour que chaque pièce soit faite pour votre maison.",r3t:"Pièces d'auteur",r3d:"Mah Jong, Bubble et des collections signées par des designers et des maisons de mode.",
 f1t:"Un œil immobilier",f1d:"Je viens de l'immobilier sur la Costa del Sol : je sais ce qui rend une villa plus agréable à vivre et plus précieuse.",f2t:"Quatre langues",f2d:"Espagnol, anglais, français et italien, sans intermédiaire.",f3t:"Tout en 3D",f3d:"Salon, chambres, salle à manger, couloirs et porche : aucune pièce sans son image.",
 qT:"Questions <span class=\"s\">fréquentes</span>",qP:"Ce que les propriétaires me demandent avant de commencer.",
-faq:[["Combien coûte l'aménagement d'une villa avec Roche Bobois ?","Cela dépend de la surface, des pièces et des tissus choisis. Après la première visite, je prépare une version essentielle et une version complète, pièce par pièce, adaptées à votre budget."],["Faut-il changer les sols ou les murs ?","Non. Je travaille sur votre maison telle qu'elle est : sols, murs, fenêtres et plafonds sont conservés. Tout travail est proposé à part et seulement si vous le demandez."],["Puis-je voir le résultat avant d'acheter ?","Oui. Vous recevez le plan meublé et chaque pièce en 3D et en image réaliste, avec les pièces exactes choisies."],["Travaillez-vous avec des propriétaires étrangers ?","Oui. Je travaille en espagnol, anglais, français et italien et je peux suivre le projet à distance."],["Quelles zones couvrez-vous ?","Toute la Costa del Sol : Marbella, Puerto Banús, Nueva Andalucía, Benahavís, La Zagaleta, Estepona, Sotogrande, Mijas et Málaga."]],
+faq:[["Combien coûte l'aménagement d'une villa avec Roche Bobois ?","Cela dépend de la surface, des pièces et des tissus choisis. Après la première visite, je prépare une version essentielle et une version complète, pièce par pièce, adaptées à votre budget."],["Le projet de décoration est-il facturé à part ?", "Non. Quand vous meublez votre maison avec Roche Bobois, le projet, les rendus 3D et le suivi sont inclus. Vous payez les pièces choisies, au prix officiel de la marque."],["Faut-il changer les sols ou les murs ?","Non. Je travaille sur votre maison telle qu'elle est : sols, murs, fenêtres et plafonds sont conservés. Tout travail est proposé à part et seulement si vous le demandez."],["Puis-je voir le résultat avant d'acheter ?","Oui. Vous recevez le plan meublé et chaque pièce en 3D et en image réaliste, avec les pièces exactes choisies."],["Travaillez-vous avec des propriétaires étrangers ?","Oui. Je travaille en espagnol, anglais, français et italien et je peux suivre le projet à distance."],["Quelles zones couvrez-vous ?","Toute la Costa del Sol : Marbella, Puerto Banús, Nueva Andalucía, Benahavís, La Zagaleta, Estepona, Sotogrande, Mijas et Málaga."]],
 cT:"Parlez-moi <span class=\"s\">de votre maison.</span>",cP:"Remplissez ce que vous savez. Je prépare un message avec vos informations à envoyer par WhatsApp ou e-mail, et je vous réponds personnellement.",copy:"Copier",copied:"Copié",
 fName:"Nom",fPhone:"Téléphone ou WhatsApp",fEmail:"E-mail (facultatif)",fType:"Type de bien",t0:"Villa",t1:"Penthouse",t2:"Appartement",t3:"Maison de ville",fZone:"Zone",zOther:"Autre",fSize:"Surface (m²)",fWhen:"Délai",w0:"Dès que possible",w1:"Dans 3 mois",w2:"Dans 6 mois",w3:"Simple exploration",fRooms:"Pièces",fBudget:"Budget mobilier et décoration",fMsg:"Comment imaginez-vous votre maison",fMsgPh:"Lumineuse, méditerranéenne, de la couleur au salon…",fSend:"Préparer ma demande",
 rooms:["Maison entière","Salon","Salle à manger","Chambres","Terrasse et porche","Bureau","Entrée et couloirs"],budget:["Jusqu'à 50 000 €","50 000–100 000 €","100 000–250 000 €","250 000–500 000 €","Plus de 500 000 €"],
@@ -689,11 +733,11 @@ dT:"Votre demande est prête",dWa:"Envoyer par WhatsApp",dCopy:"Copier pour e-ma
 msgHead:"Bonjour Felipe, je souhaite meubler ma maison avec Roche Bobois.",lab:{name:"Nom",phone:"Téléphone",email:"E-mail",type:"Bien",zone:"Zone",size:"Surface",when:"Délai",rooms:"Pièces",budget:"Budget",msg:"Idée"},
 foo1:"Maison d'intérieurs · Mobilier et décoration Roche Bobois · Marbella, Costa del Sol",foo2:"Site personnel de Felipe Paris. Roche Bobois, Bubble et Mah Jong sont des marques de leurs titulaires."},
 
-it:{nAbout:"Chi sono",abT:"Ciao, sono <span class=\"s\">Felipe</span>, interior designer a Marbella.",abP1:"A 16 anni mi sono trasferito a Bordeaux e lì ho imparato il mestiere: cinque anni con Roche Bobois in Francia, tra showroom e fiere del mobile, conoscendo ogni collezione dall'interno.",abP2:"Poi ho trascorso più di tre anni nel settore immobiliare della Costa del Sol. Lì ho scoperto ciò che amo di più: accompagnare i proprietari che compravano a Marbella anche dopo la vendita, aiutandoli ad arredare e decorare la loro nuova casa perché la sentissero loro fin dal primo giorno.",abP3:"Oggi mi dedico completamente a questo: progetto interni completi con la maison francese che conosco meglio, Roche Bobois, nella tua lingua: spagnolo, francese, inglese o italiano.",tl1:"Roche Bobois, Groupe Bayle (Bordeaux)",tl2:"Keller Williams, Costa del Sol · vendite e arredo post-vendita",tl3:"Certificato LVMH",tl4y:"Da ottobre 2026",tl4:"Interior designer · Roche Bobois Marbella",abCta:"Parliamo della tua casa",abAlt:"Felipe Paris nel soggiorno di una casa arredata a Marbella",rvScore:"4,7",rvVia:"Trustpilot · verificata",nRv:"Recensioni",rvT:"Recensioni <span class=\"s\">reali</span>",rvP:"La valutazione dello showroom Roche Bobois Marbella e, a seguire, le recensioni dei proprietari con cui lavoro.",rvStore:"<b>Roche Bobois Marbella</b>, lo showroom dove lavoro e da cui arrivano tutti i pezzi dei tuoi progetti: 4,7 su 5 su 29 recensioni di clienti su Trustpilot.",rvSrc:"Fonte: Trustpilot, consultato a ottobre 2026. Recensioni dello showroom, citate così come sono, nella lingua originale.",rvRead:"Leggi le recensioni",rvEmpty:"Le prime recensioni dei miei clienti appariranno qui, con il loro nome e la loro casa.",rvLeave:"Lascia una recensione",rvGoogle:"Recensisci su Google",rvHow:"Abbiamo già lavorato insieme? Copia questo messaggio, completalo e inviamelo:",rvTplTxt:"Ciao Felipe, ecco la mia recensione per il tuo sito:\n\nNome (o iniziali):\nZona e tipo di immobile:\nVoto (da 1 a 5):\nLa mia esperienza:\n\nAutorizzo la pubblicazione.",skip:"Vai al contenuto",nBA:"Prima e dopo",nMethod:"Metodo",nFaq:"Domande",nContact:"Contatti",cta:"Richiedi una proposta",
-h1a:"L'art de vivre,",h1b:"sul mare.",heroSub:"Interni completi Roche Bobois a Marbella. Progetto ogni ambiente della tua villa e lo vedi in 3D prima di decidere.",ctaBA:"Vedi prima e dopo",
-hudScan:"Scansione del soggiorno",hudDone:"Soggiorno riarredato",hudLoc:"Villa · Marbella · 62 m²",replay:"Ripeti scansione",
+it:{nPrice:"Prezzi",prT:"Prezzi <span class=\"s\">chiari.</span>",prP:"Nessuna sorpresa: sai fin dall'inizio cosa paghi e cosa è incluso.",prTag:"Consigliato",prCta:"Prenota la consulenza gratuita",prWa:"WhatsApp",prCall:"Chiamami",prWaTxt:"Ciao Felipe, vorrei una consulenza gratuita per la mia casa.",pr1n:"Consulenza",pr1p:"Gratis",pr1s:"Senza impegno",pr1l:"<li>Primo sopralluogo o videochiamata</li><li>Idee e stile per la tua casa</li><li>Prima selezione di pezzi</li><li>In italiano, spagnolo, inglese o francese</li>",pr2n:"Progetto completo",pr2p:"Incluso",pr2s:"arredando con Roche Bobois",pr2l:"<li>Pianta arredata</li><li>Render 3D di ogni ambiente</li><li>Preventivo pezzo per pezzo</li><li>Assistenza fino alla consegna</li>",pr3n:"Arredi",pr3p:"Prezzo ufficiale",pr3s:"Listino Roche Bobois",pr3l:"<li>Stesso prezzo del negozio</li><li>Tessuti e finiture su misura</li><li>Consegna e montaggio secondo le condizioni del negozio</li>",nAbout:"Chi sono",abT:"Ciao, sono <span class=\"s\">Felipe</span>, interior designer a Marbella.",abP1:"A 16 anni mi sono trasferito a Bordeaux e lì ho imparato il mestiere: cinque anni con Roche Bobois in Francia, tra showroom e fiere del mobile, conoscendo ogni collezione dall'interno.",abP2:"Poi ho trascorso più di tre anni nel settore immobiliare della Costa del Sol. Lì ho scoperto ciò che amo di più: accompagnare i proprietari che compravano a Marbella anche dopo la vendita, aiutandoli ad arredare e decorare la loro nuova casa perché la sentissero loro fin dal primo giorno.",abP3:"Oggi mi dedico completamente a questo: progetto interni completi con la maison francese che conosco meglio, Roche Bobois, nella tua lingua: spagnolo, francese, inglese o italiano.",tl1:"Roche Bobois, Groupe Bayle (Bordeaux)",tl2:"Keller Williams, Costa del Sol · vendite e arredo post-vendita",tl3:"Certificato LVMH",tl4y:"Da ottobre 2026",tl4:"Interior designer · Roche Bobois Marbella",abCta:"Parliamo della tua casa",abAlt:"Felipe Paris nel soggiorno di una casa arredata a Marbella",rvScore:"4,7",rvVia:"Trustpilot · verificata",nRv:"Recensioni",rvT:"Recensioni <span class=\"s\">reali</span>",rvP:"La valutazione dello showroom Roche Bobois Marbella e, a seguire, le recensioni dei proprietari con cui lavoro.",rvStore:"<b>Roche Bobois Marbella</b>, lo showroom dove lavoro e da cui arrivano tutti i pezzi dei tuoi progetti: 4,7 su 5 su 29 recensioni di clienti su Trustpilot.",rvSrc:"Fonte: Trustpilot, consultato a ottobre 2026. Recensioni dello showroom, citate così come sono, nella lingua originale.",rvRead:"Leggi le recensioni",rvEmpty:"Le prime recensioni dei miei clienti appariranno qui, con il loro nome e la loro casa.",rvLeave:"Lascia una recensione",rvGoogle:"Recensisci su Google",rvHow:"Abbiamo già lavorato insieme? Copia questo messaggio, completalo e inviamelo:",rvTplTxt:"Ciao Felipe, ecco la mia recensione per il tuo sito:\n\nNome (o iniziali):\nZona e tipo di immobile:\nVoto (da 1 a 5):\nLa mia esperienza:\n\nAutorizzo la pubblicazione.",skip:"Vai al contenuto",nBA:"Prima e dopo",nMethod:"Metodo",nFaq:"Domande",nContact:"Contatti",cta:"Richiedi una proposta",
+h1a:"L'art de vivre,",h1b:"sul mare.",heroSub:"Interior designer specializzato in Roche Bobois a Marbella. Progetto e render 3D sono inclusi: vedi ogni ambiente della tua villa prima di decidere.",ctaBA:"Vedi prima e dopo",
+hudScan:"Arredando il soggiorno",hudDone:"Soggiorno riarredato",hudLoc:"Villa · Marbella · 600 m²",replay:"Ripeti scansione",
 mani:"Progetto interni completi con un solo catalogo, <span class=\"s\">Roche Bobois</span>, e una sola persona al tuo fianco. Dalla prima pianta all'ultima lampada, vedi la tua casa in 3D prima di decidere.",
-baT:"Lo stesso soggiorno. <span class=\"s\">Un'altra vita.</span>",baP:"Una villa vista mare a Marbella. Pavimento, pareti e finestre restano; cambiano arredi e decorazione, tutto Roche Bobois. Trascina per confrontare.",before:"Prima",after:"Dopo",baAria:"Confronta prima e dopo",altB:"Soggiorno di una villa a Marbella prima dell'arredo, con mobili vecchi e scatoloni",altA:"Lo stesso soggiorno con divano Bubble, composizione Mah Jong e poltrone Bubble di Roche Bobois",
+baT:"Lo stesso soggiorno. <span class=\"s\">Un'altra vita.</span>",baP:"Proposta in render per il soggiorno di una villa di 600 m² vista mare a Marbella. Pavimento, pareti e finestre restano; cambiano arredi e decorazione. Trascina per confrontare.",before:"Prima",after:"Dopo",baAria:"Confronta prima e dopo",altB:"Soggiorno vuoto a doppia altezza in una villa vista mare a Marbella, prima dell'arredo",altA:"Lo stesso soggiorno arredato: grande divano modulare in bouclé, tavolini in travertino, poltrone in pelle e tavolo da pranzo per dieci",
 cr1:"Divano · Sacha Lakic · bouclé crema",cr2:"Composizione · Hans Hopfer",cr3:"Poltrone · velluto cognac",cr4:"Tavolo in marmo, tappeto e lampada ad arco",ai:"Immagine indicativa generata con IA; forme e finiture definitive secondo la scheda ufficiale di ogni pezzo.",
 detT:"I dettagli <span class=\"s\">fanno la casa.</span>",detP:"Texture da toccare, volumi che invitano a sedersi e una luce pensata per ogni ora della Costa del Sol.",d1:"bouclé crema",d2:"moduli impilabili",d3t:"Luce e marmo",d3:"lampada ad arco",altD1:"Dettaglio del divano Bubble in bouclé crema vicino alla piscina",altD2:"Dettaglio della composizione Mah Jong con cuscini stampati",altD3:"Lampada ad arco, tavolino in marmo e poltrone in velluto cognac",
 mT:"Cinque passi. <span class=\"s\">Un solo interlocutore.</span>",mP:"La tua casa viene rispettata così com'è. Dalla prima pianta all'ultima lampada, parli sempre con me.",
@@ -702,7 +746,7 @@ pT:"Un catalogo. <span class=\"s\">Una firma.</span>",pP:"Una maison di design f
 r1t:"Design francese dal 1960",r1d:"Divani, tavoli, letti, luci, tappeti e oggetti di un'unica maison: un interno coerente dall'ingresso alla terrazza.",r2t:"Su misura",r2d:"Centinaia di tessuti, pelli e finiture perché ogni pezzo sia fatto per la tua casa.",r3t:"Pezzi d'autore",r3d:"Mah Jong, Bubble e collezioni firmate da designer e case di moda.",
 f1t:"Occhio immobiliare",f1d:"Vengo dal settore immobiliare della Costa del Sol: so cosa rende una villa più vivibile e di maggior valore.",f2t:"Quattro lingue",f2d:"Spagnolo, inglese, francese e italiano, senza intermediari.",f3t:"Tutto in 3D",f3d:"Soggiorno, camere, sala da pranzo, corridoi e portico: nessun ambiente senza la sua immagine.",
 qT:"Domande <span class=\"s\">frequenti</span>",qP:"Quello che i proprietari mi chiedono prima di iniziare.",
-faq:[["Quanto costa arredare una villa con Roche Bobois?","Dipende da superficie, ambienti e tessuti scelti. Dopo il primo sopralluogo preparo una versione essenziale e una completa, pezzo per pezzo, adatte al tuo budget."],["Bisogna cambiare pavimenti o pareti?","No. Lavoro sulla tua casa così com'è: pavimenti, pareti, finestre e soffitti restano. Eventuali lavori si propongono a parte e solo se li chiedi."],["Posso vedere il risultato prima di acquistare?","Sì. Ricevi la pianta arredata e ogni ambiente in 3D e in immagine realistica, con i pezzi esatti scelti."],["Lavori con proprietari stranieri?","Sì. Lavoro in spagnolo, inglese, francese e italiano e posso seguire il progetto a distanza."],["In quali zone lavori?","Tutta la Costa del Sol: Marbella, Puerto Banús, Nueva Andalucía, Benahavís, La Zagaleta, Estepona, Sotogrande, Mijas e Málaga."]],
+faq:[["Quanto costa arredare una villa con Roche Bobois?","Dipende da superficie, ambienti e tessuti scelti. Dopo il primo sopralluogo preparo una versione essenziale e una completa, pezzo per pezzo, adatte al tuo budget."],["Il progetto d'arredo si paga a parte?", "No. Quando arredi la tua casa con Roche Bobois, progetto, render 3D e assistenza sono inclusi. Paghi i pezzi che scegli, al prezzo ufficiale del marchio."],["Bisogna cambiare pavimenti o pareti?","No. Lavoro sulla tua casa così com'è: pavimenti, pareti, finestre e soffitti restano. Eventuali lavori si propongono a parte e solo se li chiedi."],["Posso vedere il risultato prima di acquistare?","Sì. Ricevi la pianta arredata e ogni ambiente in 3D e in immagine realistica, con i pezzi esatti scelti."],["Lavori con proprietari stranieri?","Sì. Lavoro in spagnolo, inglese, francese e italiano e posso seguire il progetto a distanza."],["In quali zone lavori?","Tutta la Costa del Sol: Marbella, Puerto Banús, Nueva Andalucía, Benahavís, La Zagaleta, Estepona, Sotogrande, Mijas e Málaga."]],
 cT:"Raccontami <span class=\"s\">la tua casa.</span>",cP:"Compila ciò che sai. Preparo un messaggio con i tuoi dati da inviare via WhatsApp o email, e ti rispondo personalmente.",copy:"Copia",copied:"Copiato",
 fName:"Nome",fPhone:"Telefono o WhatsApp",fEmail:"Email (facoltativa)",fType:"Tipo di immobile",t0:"Villa",t1:"Attico",t2:"Appartamento",t3:"Villetta",fZone:"Zona",zOther:"Altra",fSize:"Superficie (m²)",fWhen:"Tempi",w0:"Il prima possibile",w1:"Tra 3 mesi",w2:"Tra 6 mesi",w3:"Sto solo esplorando",fRooms:"Ambienti",fBudget:"Budget per arredi e decorazione",fMsg:"Come immagini la tua casa",fMsgPh:"Luminosa, mediterranea, colore in soggiorno…",fSend:"Prepara la mia richiesta",
 rooms:["Casa intera","Soggiorno","Sala da pranzo","Camere","Terrazza e portico","Studio","Ingresso e corridoi"],budget:["Fino a 50.000 €","50.000–100.000 €","100.000–250.000 €","250.000–500.000 €","Oltre 500.000 €"],
@@ -748,7 +792,7 @@ function apply(){
   document.querySelectorAll("[data-i-ph]").forEach(el=>el.placeholder=t(el.dataset.iPh));
   document.querySelectorAll("[data-i-aria]").forEach(el=>el.setAttribute("aria-label",t(el.dataset.iAria)));
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===L));
-  chips("rooms",t("rooms"),"checkbox");chips("budget",t("budget"),"radio");faq();words();reviews();
+  chips("rooms",t("rooms"),"checkbox");chips("budget",t("budget"),"radio");faq();words();reviews();{const w=document.getElementById("prWa");if(w)w.href="https://wa.me/"+(WHATSAPP||"34651059366")+"?text="+encodeURIComponent(t("prWaTxt"));}
   if(window.__scanDone)document.querySelector("[data-i=hudScan]").textContent=t("hudDone");
   if(!document.getElementById("done").hidden)summary();
 }
@@ -806,75 +850,97 @@ apply();onScroll();
 </script>
 
 <script type="module">
-/* Hero: the villa photo becomes a real 3D relief (MiDaS depth map), and a scanner beam
-   sweeps through its depth, turning "before" into "after". Parallax follows the pointer. */
+/* Hero: the villa photo becomes a 3D relief (Depth Anything V2 depth maps). A warm light front
+   travels through the room from the sea towards the viewer; as it passes, the empty villa is
+   furnished and each piece rises out of the floor. Dust motes drift in the sunlight; the camera
+   pushes in like a film opening and follows the pointer (or the phone's tilt). */
 import * as THREE from "three";
 const canvas=document.getElementById("gl");
 const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
-let renderer;try{renderer=new THREE.WebGLRenderer({canvas,antialias:true});}catch(e){throw e;}
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:"high-performance"});
 renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;
 const scene=new THREE.Scene();const cam=new THREE.PerspectiveCamera(30,1,.01,20);cam.position.set(0,0,2.4);
 const TL=new THREE.TextureLoader();
 const load=u=>new Promise((res,rej)=>TL.load(u,res,undefined,rej));
-const [tA,tB,dA,dB]=await Promise.all([load("/assets/antes.jpg"),load("/assets/despues.jpg"),load("/assets/antes_depth.png"),load("/assets/despues_depth.png")]);
+const [tA,tB,dA,dB,tR]=await Promise.all([load("/assets/antes.jpg"),load("/assets/despues.jpg"),load("/assets/antes_depth.png"),load("/assets/despues_depth.png"),load("/assets/reveal.png")]);
 [tA,tB].forEach(x=>{x.colorSpace=THREE.SRGBColorSpace;x.anisotropy=8;});
-const uni={uA:{value:tA},uB:{value:tB},uDA:{value:dA},uDB:{value:dB},uP:{value:-.2},uT:{value:0},uDepth:{value:.34},uHover:{value:new THREE.Vector2(.5,.5)}};
+const AR=1920/1072;
+const uni={uA:{value:tA},uB:{value:tB},uDA:{value:dA},uDB:{value:dB},uR:{value:tR},uP:{value:-.2},uT:{value:0},uDepth:{value:.42}};
 const mat=new THREE.ShaderMaterial({uniforms:uni,
 vertexShader:`
-uniform sampler2D uDA,uDB;uniform float uP,uDepth;varying vec2 vUv;varying float vD;varying float vS;
-void main(){vUv=uv;float dA=texture2D(uDA,uv).r,dB=texture2D(uDB,uv).r;
- float s=uv.x+(dB-.5)*.18; float m=smoothstep(uP-.04,uP+.04,s); // 1 = still "before"
- float d=mix(dB,dA,m); vD=d; vS=s;
- vec3 p=position; p.z+=d*uDepth;
+uniform sampler2D uDA,uDB,uR;uniform float uP,uDepth;varying vec2 vUv;varying float vR;varying float vF;varying float vD;
+float backOut(float x){float c=1.4;x-=1.;return 1.+x*x*((c+1.)*x+c);}
+void main(){vUv=uv;float a=texture2D(uDA,uv).r,b=texture2D(uDB,uv).r;
+ float f=clamp((b-a)*3.,0.,1.);                      // how much "new furniture" sits here
+ float q=texture2D(uR,uv).r*.84+abs(uv.x-.5)*.16;                     // far (sea) first, then towards the viewer
+ float r=clamp((uP-q)/.16,0.,1.);                    // 0 = still empty, 1 = furnished
+ float g=backOut(r);
+ float d=a+(b-a)*g; vR=r; vF=f; vD=d;
+ vec3 p=position; p.z+=d*uDepth; p.y-=f*(1.-smoothstep(0.,1.,r))*.035;   // pieces rise out of the floor
  gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);}`,
 fragmentShader:`
-uniform sampler2D uA,uB;uniform float uP,uT;varying vec2 vUv;varying float vD;varying float vS;
+uniform sampler2D uA,uB;uniform float uT;varying vec2 vUv;varying float vR;varying float vF;varying float vD;
 void main(){
  vec3 a=texture2D(uA,vUv).rgb, b=texture2D(uB,vUv).rgb;
- float edge=uP-vS;                       // >0 already scanned
- float done=smoothstep(-.002,.002,edge);
- vec3 c=mix(a,b,done);
- // scanner band: thin bright line + depth-contour grid trailing behind it
- float line=exp(-abs(edge)*420.)*1.6;
- float trail=smoothstep(.0,.12,edge)*(1.-smoothstep(.12,.22,edge));
- float contour=smoothstep(.92,1.,abs(fract(vD*26.-uT*.3)*2.-1.));
- vec2 g=abs(fract(vUv*vec2(64.,36.))-.5); float grid=smoothstep(.47,.5,max(g.x,g.y));
- vec3 sun=vec3(.95,.72,.29);
- c+=sun*line;
- c=mix(c,c*.55+sun*.55,trail*(contour*.8+grid*.35));
- // gentle vignette for type legibility
- float v=smoothstep(1.25,.35,length((vUv-vec2(.5,.55))*vec2(1.,1.25)));
- c*=mix(.72,1.,v);
+ float k=smoothstep(.15,.85,vR);
+ vec3 c=mix(a,b,k);
+ vec3 sun=vec3(1.,.76,.36);
+ float band=vR*(1.-vR)*4.;                            // the moving light front
+ float contour=smoothstep(.9,1.,abs(fract(vD*30.-uT*.25)*2.-1.));
+ c+=sun*band*(.22+.55*vF);                            // furniture glows as it materialises
+ c=mix(c,c*.6+sun*.6,band*contour*.55);               // depth contour lines ride the front
+ float v=smoothstep(1.3,.35,length((vUv-vec2(.5,.55))*vec2(1.,1.3)));
+ c*=mix(.7,1.,v);
  gl_FragColor=vec4(c,1.);
  #include <colorspace_fragment>
 }`});
-const plane=new THREE.Mesh(new THREE.PlaneGeometry(1.7778,1,256,144),mat);scene.add(plane);
+const plane=new THREE.Mesh(new THREE.PlaneGeometry(AR,1,320,180),mat);scene.add(plane);
+
+/* dust in the evening light */
+const N=reduce?0:(innerWidth<700?260:520);
+const pg=new THREE.BufferGeometry();const pos=new Float32Array(N*3),seed=new Float32Array(N);
+for(let i=0;i<N;i++){pos[i*3]=(Math.random()-.5)*1.9;pos[i*3+1]=(Math.random()-.5)*1.1;pos[i*3+2]=.15+Math.random()*.55;seed[i]=Math.random();}
+pg.setAttribute("position",new THREE.BufferAttribute(pos,3));pg.setAttribute("seed",new THREE.BufferAttribute(seed,1));
+const pu={uT:{value:0},uPx:{value:renderer.getPixelRatio()},uOn:{value:0}};
+const pts=new THREE.Points(pg,new THREE.ShaderMaterial({uniforms:pu,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,
+vertexShader:`attribute float seed;uniform float uT,uPx;varying float vA;
+void main(){vec3 p=position;float t=uT*.04+seed*6.283;
+ p.x+=sin(t*1.7+seed*9.)*.04+uT*.006*(seed-.3);p.y+=mod(p.y+.55+uT*.012*(.3+seed),1.1)-.55-p.y+cos(t)*.02;
+ vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;
+ gl_PointSize=(1.2+seed*2.6)*uPx*(2.2/-mv.z);vA=.25+.75*fract(seed*7.31+uT*.05*seed);}`,
+fragmentShader:`uniform float uOn;varying float vA;void main(){float d=length(gl_PointCoord-.5);float a=smoothstep(.5,0.,d)*vA*uOn*.55;gl_FragColor=vec4(1.,.82,.55,a);}`}));
+if(N)scene.add(pts);
 
 function fit(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
-  const vh=2*Math.tan(THREE.MathUtils.degToRad(cam.fov/2))*(cam.position.z-.17);const vw=vh*cam.aspect;
-  const s=Math.max(vw/1.7778,vh/1)*1.12;plane.scale.set(s,s,1);}
+  const vh=2*Math.tan(THREE.MathUtils.degToRad(cam.fov/2))*(2.4-.2);const vw=vh*cam.aspect;
+  const s=Math.max(vw/AR,vh/1)*1.32;plane.scale.set(s,s,1);}
 new ResizeObserver(fit).observe(canvas);fit();
 
-/* scan timeline (starts after the intro curtain) */
+/* timeline (starts after the intro curtain) */
 const pct=document.getElementById("hudPct"),bar=document.getElementById("hudBar"),lbl=document.querySelector("[data-i=hudScan]");
-let start=performance.now()+(reduce?0:1900),DUR=reduce?1:5200;
+let start=performance.now()+(reduce?0:1900),DUR=reduce?1:6400;
 function restart(){start=performance.now()+200;window.__scanDone=false;lbl.textContent=T[document.documentElement.lang]?.hudScan||T.es.hudScan;}
 document.getElementById("replay").addEventListener("click",restart);
 
 let mx=0,my=0,sx=0,sy=0;
 addEventListener("pointermove",e=>{mx=e.clientX/innerWidth*2-1;my=e.clientY/innerHeight*2-1;},{passive:true});
+addEventListener("deviceorientation",e=>{if(e.gamma==null)return;mx=Math.max(-1,Math.min(1,e.gamma/25));my=Math.max(-1,Math.min(1,(e.beta-45)/30));},{passive:true});
 let vis=true;new IntersectionObserver(([e])=>vis=e.isIntersecting).observe(canvas);
 const clk=new THREE.Clock();
+const ease=k=>k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
 function frame(now){requestAnimationFrame(frame);if(!vis)return;const tm=clk.getElapsedTime();
-  const k=Math.min(1,Math.max(0,(now-start)/DUR));const e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
-  uni.uP.value=-.1+e*1.25;uni.uT.value=tm;
-  const shown=Math.round(k*100);pct.textContent=shown+"%";bar.style.transform=`scaleX(${k})`;
+  const k=Math.min(1,Math.max(0,(now-start)/DUR));const e=ease(k);
+  uni.uP.value=-.02+e*1.24;uni.uT.value=tm;pu.uT.value=tm;pu.uOn.value=Math.min(1,pu.uOn.value+.008);
+  pct.textContent=Math.round(k*100)+"%";bar.style.transform=`scaleX(${k})`;
   if(k>=1&&!window.__scanDone){window.__scanDone=true;lbl.textContent=T[document.documentElement.lang]?.hudDone||T.es.hudDone;}
   sx+=(mx-sx)*.05;sy+=(my-sy)*.05;
-  const drift=reduce?0:Math.sin(tm*.25)*.05;
+  const intro=reduce?1:1-Math.pow(1-Math.min(1,Math.max(0,(now-start+1900)/(DUR+1900))),3);   // film push-in
+  const drift=reduce?0:Math.sin(tm*.22)*.045;
   const sc=Math.min(1,scrollY/innerHeight);
-  cam.position.x=(reduce?0:sx*.14)+drift;cam.position.y=(reduce?0:-sy*.08);cam.position.z=2.4-sc*.55;
-  cam.lookAt(0,0,.12);
+  cam.position.x=(reduce?0:sx*.16)+drift+(1-intro)*.12;
+  cam.position.y=(reduce?0:-sy*.09)+(1-intro)*.1;
+  cam.position.z=2.4+(1-intro)*.55-sc*.6;
+  cam.lookAt((1-intro)*.04,0,.14);
   renderer.render(scene,cam);}
 requestAnimationFrame(frame);
 canvas.closest(".hero").querySelector(".poster").style.opacity="0";
