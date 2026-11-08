@@ -54,3 +54,13 @@ main{padding:0 max(16px,4vw)}
 .foot p{margin:0}
 @media (max-width:560px){.row .btn{width:100%;justify-content:center}}
 @media (prefers-reduced-motion:reduce){.card,.btn{transition:none}}
+
+.prose figure{margin:2em 0 2.2em}
+.prose figure img{display:block;width:100%;height:auto;border-radius:14px;background:#E6E1D6}
+.prose figure.ba .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.prose figure.ba .pair>div{position:relative}
+.prose figure .lb{position:absolute;top:12px;left:12px;font:600 .66rem/1 var(--f-sans);letter-spacing:.14em;text-transform:uppercase;padding:.6em .9em;border-radius:999px;background:rgba(14,26,46,.72);color:var(--paper)}
+.prose figure .lb.a{background:var(--sun);color:var(--ink)}
+.prose figure.im img{max-width:620px;margin:0 auto}
+.prose figcaption{margin-top:.7em;font-size:.86rem;color:var(--ink-2);text-align:center}
+@media (max-width:560px){.prose figure.ba .pair{grid-template-columns:1fr}}
