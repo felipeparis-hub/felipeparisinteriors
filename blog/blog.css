@@ -64,3 +64,6 @@ main{padding:0 max(16px,4vw)}
 .prose figure.im img{max-width:620px;margin:0 auto}
 .prose figcaption{margin-top:.7em;font-size:.86rem;color:var(--ink-2);text-align:center}
 @media (max-width:560px){.prose figure.ba .pair{grid-template-columns:1fr}}
+
+.gosite{margin:22px 0 0}
+.cta .row{flex-wrap:wrap}
