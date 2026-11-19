@@ -59,8 +59,8 @@ function renderIndexes(posts){const files={};
   const ld={"@context":"https://schema.org","@type":"Blog",name:`${u.idxT} ${u.idxS} · Felipe Paris`,url:DOM+BLOG[l],inLanguage:l,blogPost:posts.map(p=>({"@type":"BlogPosting",headline:p.langs[l].title,url:DOM+urlPost(l,p),datePublished:p.date}))};
   files[BLOG[l].slice(1)+'index.html']=page(l,`${u.idxT} ${u.idxS} · Felipe Paris`,u.idxD,BLOG[l],BLOG,body,ld);}
  return files;}
-function renderSitemap(posts){const e=(loc,alts,lm)=>`<url><loc>${DOM}${loc}</loc><lastmod>${lm}</lastmod>`+LANGS.map(x=>`<xhtml:link rel="alternate" hreflang="${x}" href="${DOM}${alts[x]}"/>`).join('')+'</url>';
- const last=posts.length?posts[0].date:new Date().toISOString().slice(0,10);let xs=LANGS.map(l=>e(HOME[l],HOME,'2026-10-26')).concat(LANGS.map(l=>e(BLOG[l],BLOG,last)));
+function renderSitemap(posts){const e=(loc,alts,lm)=>`<url><loc>${DOM}${loc}</loc><lastmod>${lm}</lastmod>`+Object.keys(alts).map(x=>`<xhtml:link rel="alternate" hreflang="${x}" href="${DOM}${alts[x]}"/>`).join('')+'</url>';
+ const last=posts.length?posts[0].date:new Date().toISOString().slice(0,10);const HALL=Object.assign({},HOME,{nl:'/nl/',de:'/de/'});let xs=Object.keys(HALL).map(l=>e(HALL[l],HALL,'2026-11-19')).concat(LANGS.map(l=>e(BLOG[l],BLOG,last)));
  for(const p of posts){const alts={};LANGS.forEach(l=>alts[l]=urlPost(l,p));xs=xs.concat(LANGS.map(l=>e(alts[l],alts,p.updated||p.date)));}
  return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+xs.join('')+'</urlset>\n';}
 async function getJSON(path,fallback){const r=await fetch(RAW+path+'?t='+Date.now(),{cache:'no-store'});if(!r.ok){if(fallback!==undefined)return fallback;throw new Error(path+' '+r.status);}return r.json();}
@@ -83,5 +83,5 @@ function upload(dir){const byDir=JSON.parse(sessionStorage.getItem('fpblog')||'{
 async function verify(){const byDir=JSON.parse(sessionStorage.getItem('fpblog')||'{}');const bad=[];
  for(const [dir,files] of Object.entries(byDir))for(const [n,c] of Object.entries(files)){const p=(dir?dir+'/':'')+n;const r=await fetch(RAW+p+'?t='+Date.now(),{cache:'no-store'});const t=r.ok?await r.text():'';if(t!==c)bad.push(p);}
  return bad.length?{ok:false,mismatched:bad}:{ok:true};}
-window.FPBLOG={renderPost,renderIndexes,prepare,upload,verify,dirs:()=>Object.keys(JSON.parse(sessionStorage.getItem('fpblog')||'{}'))};
+window.FPBLOG={renderSitemap,renderPost,renderIndexes,prepare,upload,verify,dirs:()=>Object.keys(JSON.parse(sessionStorage.getItem('fpblog')||'{}'))};
 })();
