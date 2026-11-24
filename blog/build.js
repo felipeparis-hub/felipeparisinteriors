@@ -59,9 +59,10 @@ function renderIndexes(posts){const files={};
   const ld={"@context":"https://schema.org","@type":"Blog",name:`${u.idxT} ${u.idxS} · Felipe Paris`,url:DOM+BLOG[l],inLanguage:l,blogPost:posts.map(p=>({"@type":"BlogPosting",headline:p.langs[l].title,url:DOM+urlPost(l,p),datePublished:p.date}))};
   files[BLOG[l].slice(1)+'index.html']=page(l,`${u.idxT} ${u.idxS} · Felipe Paris`,u.idxD,BLOG[l],BLOG,body,ld);}
  return files;}
-function renderSitemap(posts){const e=(loc,alts,lm)=>`<url><loc>${DOM}${loc}</loc><lastmod>${lm}</lastmod>`+Object.keys(alts).map(x=>`<xhtml:link rel="alternate" hreflang="${x}" href="${DOM}${alts[x]}"/>`).join('')+'</url>';
+function renderSitemap(posts,extra){const e=(loc,alts,lm)=>`<url><loc>${DOM}${loc}</loc><lastmod>${lm}</lastmod>`+Object.keys(alts).map(x=>`<xhtml:link rel="alternate" hreflang="${x}" href="${DOM}${alts[x]}"/>`).join('')+'</url>';
  const last=posts.length?posts[0].date:new Date().toISOString().slice(0,10);const HALL=Object.assign({},HOME,{nl:'/nl/',de:'/de/'});let xs=Object.keys(HALL).map(l=>e(HALL[l],HALL,'2026-11-19')).concat(LANGS.map(l=>e(BLOG[l],BLOG,last)));
  for(const p of posts){const alts={};LANGS.forEach(l=>alts[l]=urlPost(l,p));xs=xs.concat(LANGS.map(l=>e(alts[l],alts,p.updated||p.date)));}
+ for(const x of (extra||[])){xs.push(e(x.loc,x.alts||{},x.lastmod));}
  return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+xs.join('')+'</urlset>\n';}
 async function getJSON(path,fallback){const r=await fetch(RAW+path+'?t='+Date.now(),{cache:'no-store'});if(!r.ok){if(fallback!==undefined)return fallback;throw new Error(path+' '+r.status);}return r.json();}
 function check(p){if(!p||!p.id||!/^\d{4}-\d{2}-\d{2}$/.test(p.date||''))throw new Error('post needs id and date YYYY-MM-DD');
@@ -71,7 +72,7 @@ async function prepare(post,usedTopic){check(post);
  for(const id of ids){if(id!==post.id)posts.push(await getJSON('blog/post-'+id+'.json'));}
  posts.push(post);posts.sort((a,b)=>b.date.localeCompare(a.date));
  const newIds=posts.map(p=>p.id);
- const out=Object.assign({},renderPost(post,posts),renderIndexes(posts));out['sitemap.xml']=renderSitemap(posts);
+ const out=Object.assign({},renderPost(post,posts),renderIndexes(posts));out['sitemap.xml']=renderSitemap(posts,await getJSON('blog/extra-urls.json',[]));
  out['blog/posts.json']=JSON.stringify(newIds);out['blog/post-'+post.id+'.json']=JSON.stringify(post,null,1);
  if(usedTopic!==undefined){const topics=await getJSON('blog/topics.json',[]);out['blog/topics.json']=JSON.stringify(topics.filter(t=>t!==usedTopic),null,1);}
  const byDir={};for(const [path,content] of Object.entries(out)){const i=path.lastIndexOf('/');const dir=i<0?'':path.slice(0,i);(byDir[dir]=byDir[dir]||{})[path.slice(i+1)]=content;}
